@@ -4,7 +4,7 @@ MAINTAINER Pierre Cheynier <pierre.cheynier@gmail.com>
 ENV PHPIPAM_SOURCE https://github.com/phpipam/phpipam/
 ARG PHPIPAM_VERSION=1.6.0
 ENV PHPMAILER_SOURCE https://github.com/PHPMailer/PHPMailer/
-ARG PHPMAILER_VERSION=6.7.1
+ARG PHPMAILER_VERSION=6.9.1
 ENV PHPSAML_SOURCE https://github.com/onelogin/php-saml/
 ARG PHPSAML_VERSION=3.4.1
 ENV WEB_REPO /var/www/html
@@ -40,7 +40,7 @@ RUN docker-php-ext-configure mysqli --with-mysqli=mysqlnd && \
     docker-php-ext-install pcntl && \
     docker-php-ext-configure ldap --with-libdir=lib/$(uname -m)-linux-gnu && \
     docker-php-ext-install ldap && \
-    pecl install mcrypt-1.0.1 && \
+    pecl install mcrypt && \
     docker-php-ext-enable mcrypt && \
     echo ". /etc/environment" >> /etc/apache2/envvars && \
     a2enmod rewrite
