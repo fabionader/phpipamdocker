@@ -1,8 +1,8 @@
-FROM php:7.2-apache
+FROM php:7.4-apache
 MAINTAINER Pierre Cheynier <pierre.cheynier@gmail.com>
 
 ENV PHPIPAM_SOURCE https://github.com/phpipam/phpipam/
-ARG PHPIPAM_VERSION=1.5.2
+ARG PHPIPAM_VERSION=1.6
 ENV PHPMAILER_SOURCE https://github.com/PHPMailer/PHPMailer/
 ARG PHPMAILER_VERSION=6.7.1
 ENV PHPSAML_SOURCE https://github.com/onelogin/php-saml/
